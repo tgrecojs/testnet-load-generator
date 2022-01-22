@@ -1,3 +1,4 @@
+
 # Load Generator
 
 The loadgen is implemented as a dapp deploy script which runs forever and listens for config updates. It can perform 3 different type of load generating tasks at any given interval (cycle): `faucet`, `amm`, `vault`. Each task is deployed to a vat on the solo client. Additionally the `faucet` task installs a faucet app on the chain. When the loadgen server starts a task's cycle, it invokes the task's agent running on the solo client, which performs its load generation on the chain.
